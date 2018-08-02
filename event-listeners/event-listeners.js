@@ -1,13 +1,12 @@
 // YOUR TASK: Add more pictures!
-var pictures = ['./imgs/dog.jpg'];
+var pictures = ['./imgs/dog.jpg','./imgs/desert.jpg','./imgs/music.jpg','./imgs/beach.jpg','./imgs/festival.jpg'];
 var currentIndex = 0;
 
-function showNextPicture() {
-  currentIndex++; // increment current picture
-  // if currentIndex is too large, start from the beginning again
+document.getElementById("pic").addEventListener("click",function showNextPicture() {
+  currentIndex++; 
   if (currentIndex >= pictures.length) {
     currentIndex = 0;
   }
-
-  // YOUR TASK: Finish this function!
-}
+  document.getElementById("pic").src = pictures[currentIndex]
+  
+});
